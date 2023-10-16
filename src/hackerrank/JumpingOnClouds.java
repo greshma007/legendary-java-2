@@ -31,15 +31,16 @@ public class JumpingOnClouds {
 	 * 
 	 * Finding the minimum jumps required
 	 * 
-	 * @param c
+	 * @param list
 	 */
-	private static int jumpingOnClouds(List<Integer> c) {
+	private static int jumpingOnClouds(List<Integer> list) {
 
 		int jumpCount = 0;
 		int pos = 0;
-
-		while (pos < c.size() - 1) {
-			 if (pos + 2 < c.size() && c.get(pos + 2) == 0) {
+		int size = list.size();
+		
+		while (pos < size - 1) {
+			 if (pos + 2 < size && list.get(pos + 2) == 0) {
 				pos = pos + 2;
 			} else {
 				pos = pos + 1;
